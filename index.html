@@ -3,8 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <title>JS Que</title>
+    <style>
+
+        section {
+            width: 100%;
+            height: 230px;
+        }
+
+        div {
+            position: relative;
+            width: 100px;
+            aspect-ratio: 1/1;
+            border: 5px solid red;
+            text-align: center;
+            display: inline-block;
+            margin: 50px;
+            font-size: 30px;
+            font-weight: bolder;
+        }
+    </style>
+
 </head>
     <body>
+        <section>
+            <div id="a">
+                A
+            </div>
+            <div id="b">
+                B
+            </div>
+            <div id="c">
+                C
+            </div>
+            <div id="d">
+                D
+            </div>
+            <div id="e">
+                E
+            </div>
+            <div id="f">
+                F
+            </div>
+        </section>
 
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+
+        <script src="assets/lib/jquery-3.7.1.min.js"></script>
+        <script>
+            var array = ["A","B","C","D","E","F"];
+
+            var Q;
+
+            function replaceText() {
+                let lastValue = array.pop(); /*this will caught the last index*/
+                array.unshift(lastValue);
+
+                $('#a').text(array[0]);
+                $('#b').text(array[1]);
+                $('#c').text(array[2]);
+                $('#d').text(array[3]);
+                $('#e').text(array[4]);
+                $('#f').text(array[5]);
+            }
+
+            $('#start').on('click',() =>{
+                console.log("start");
+                Q = setInterval(replaceText,2000);
+            })
+
+            $('#stop').on('click',() =>{
+                console.log("stop");
+                clearInterval(Q);
+            })
+
+        </script>
     </body>
 </html>
