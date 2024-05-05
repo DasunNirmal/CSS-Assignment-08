@@ -5,49 +5,78 @@
     <title>JS Que</title>
     <style>
 
-        section {
-            width: 100%;
-            height: 230px;
+        body {
+            background-color: #ced6e0;
         }
 
-        div {
-            position: relative;
-            width: 100px;
-            aspect-ratio: 1/1;
-            border: 5px solid red;
+        #gif-section {
+            width: 80%;
+            height: 202px;
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        .gifs {
+            width: 200px;
+            height: 200px;
+            background: url("assets/gifs/Lateness.gif") no-repeat center;
+            background-size: cover;
+        }
+
+        #letters-section {
+            width: 90%;
+            height: 202px;
+            display: flex;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
             text-align: center;
-            display: inline-block;
-            margin: 50px;
             font-size: 30px;
             font-weight: bolder;
+            color: #ee5253;
         }
+
+        .letters {
+            width: 50px;
+            height: 30px;
+            margin-right: 213px;
+            position: relative;
+            left: 209px;
+        }
+
     </style>
 
 </head>
     <body>
-        <section>
-            <div id="a">
-                A
-            </div>
-            <div id="b">
-                B
-            </div>
-            <div id="c">
-                C
-            </div>
-            <div id="d">
-                D
-            </div>
-            <div id="e">
-                E
-            </div>
-            <div id="f">
-                F
-            </div>
+        <section id="gif-section">
+            <div class="gifs"></div>
+            <div class="gifs"></div>
+            <div class="gifs"></div>
+            <div class="gifs"></div>
+            <div class="gifs"></div>
+            <div class="gifs"></div>
         </section>
 
-        <button id="start">Start</button>
-        <button id="stop">Stop</button>
+        <section id="letters-section">
+            <div class="letters" id="a">A</div>
+            <div class="letters" id="b">B</div>
+            <div class="letters" id="c">C</div>
+            <div class="letters" id="d">D</div>
+            <div class="letters" id="e">E</div>
+            <div class="letters" id="f">F</div>
+        </section>
+
+        <section id="buttons">
+            <button id="start">Start</button>
+            <button id="stop">Stop</button>
+        </section>
 
         <script src="assets/lib/jquery-3.7.1.min.js"></script>
         <script>
