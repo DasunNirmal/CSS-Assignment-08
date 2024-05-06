@@ -8,10 +8,9 @@
         body {
             background-color: #ced6e0;
         }
-
         #gif-section {
             width: 80%;
-            height: 202px;
+            height: 172px;
             display: flex;
             justify-content: space-between;
             position: absolute;
@@ -20,6 +19,7 @@
             bottom: 0;
             margin: auto;
         }
+
 
         .gifs {
             width: 200px;
@@ -40,7 +40,7 @@
             text-align: center;
             font-size: 30px;
             font-weight: bolder;
-            color: #ee5253;
+            color: #B33771;
         }
 
         .letters {
@@ -49,6 +49,36 @@
             margin-right: 213px;
             position: relative;
             left: 209px;
+        }
+
+        .line-left>hr {
+            height: 1px;
+            width: 90%;
+            border: 0;
+            background: #2C3A47;
+        }
+
+        .line-left {
+            height: 2px;
+            width: 90%;
+            border: 0;
+            position: absolute;
+            top: 180px;
+            right: 280px;
+            bottom: 0;
+            margin: auto;
+        }
+
+        #building {
+            width: 350px;
+            height: 270px;
+            background: url("assets/gifs/Building.gif") no-repeat center;
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 60px;
+            margin: auto;
         }
 
     </style>
@@ -63,6 +93,9 @@
             <div class="gifs"></div>
             <div class="gifs"></div>
         </section>
+
+        <div class="line-left"><hr></div>
+        <div id="building"></div>
 
         <section id="letters-section">
             <div class="letters" id="a">A</div>
@@ -98,7 +131,7 @@
 
             $('#start').on('click',() =>{
                 console.log("start");
-                Q = setInterval(replaceText,2000);
+                Q = setInterval(replaceText,1500);
             })
 
             $('#stop').on('click',() =>{
